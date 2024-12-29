@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workout Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+
+  <header>
+    <h1>Workout Tracker</h1>
+  </header>
+
+      <!-- Modal for Confirmation -->
+      <div id="modal" class="hidden">
+        <div class="modal-content">
+          <p id="modal-text"></p>
+          <button id="confirm-btn">Confirm</button>
+          <button id="cancel-btn">Cancel</button>
+        </div>
+      </div>
+      
+  <main>
+    <!-- Login/Register Page -->
+    <section id="login-register" class="hidden">
+      <h2>Register</h2>
+      <form id="login-register-form">
+        <label for="register-first-name">First Name:</label>
+        <input type="text" id="register-first-name" required>
+        <label for="register-last-name">Last Name:</label>
+        <input type="text" id="register-last-name" required>
+        <label for="register-email">Email:</label>
+        <input type="email" id="register-email" required>
+        <label for="register-password">Password:</label>
+        <input type="password" id="register-password" required>
+        <button type="submit">Register</button>
+      </form>
+      <p>Already a user? <a href="#" id="login-link">Login Here</a></p>
+    </section>
+    
+    <section id="login-page" class="hidden">
+      <h2>Login</h2>
+      <form id="login-form">
+        <label for="login-email">Email:</label>
+        <input type="email" id="login-email" required>
+        <label for="login-password">Password:</label>
+        <input type="password" id="login-password" required>
+        <button type="submit">Login</button>
+      </form>
+      <p>New user? <a href="#" id="register-link">Register Here</a></p>
+    </section>
+    
+
+    <!-- Home Page -->
+    <section id="home-page" class="hidden">
+      <h2 id="welcome-message"></h2>
+      <div class="home-buttons">
+        <button id="log-workout-btn" class="home-btn">Log Workout</button>
+        <button id="daily-tracking-btn" class="home-btn">Daily Tracking</button>
+        <button id="personal-bests-btn" class="home-btn">Personal Bests</button>
+      </div>
+      <button class="logout-btn">Logout</button>
+    </section>
+
+    <!-- Workout Entry Page -->
+    <section id="workout-entry" class="hidden">
+      <button class="back-btn">Back</button>
+      <h2>Log Your Workout</h2>
+      <form id="workout-form">
+        <label for="workout-name">Workout:</label>
+        <input list="workout-list" id="workout-name" placeholder="e.g., Bench Press" required>
+        <datalist id="workout-list"></datalist>
+        <label for="reps">Reps:</label>
+        <input type="number" id="reps" placeholder="e.g., 10" required>
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" placeholder="e.g., 50" required>
+        <button type="submit">Add Workout</button>
+      </form>
+      <button class="logout-btn">Logout</button>
+    </section>
+
+    <!-- Daily Tracking Page -->
+    <section id="daily-tracking" class="hidden">
+      <button class="back-btn">Back</button>
+      <h2>Daily Tracking</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Workout</th>
+            <th>Reps</th>
+            <th>kg</th>
+            <th>Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="daily-table-body"></tbody>
+      </table>
+      <button class="logout-btn">Logout</button>
+    </section>
+
+    <!-- Personal Bests Page -->
+    <section id="personal-bests" class="hidden">
+      <button class="back-btn">Back</button>
+      <button id="reset-pb-btn" class="reset-btn">Reset Personal Bests</button>
+      <h2>Personal Bests</h2>
+      <div>
+        <canvas id="progress-chart"></canvas>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Workout</th>
+            <th>Reps</th>
+            <th>kg</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody id="pb-table-body"></tbody>
+      </table>
+      <button class="logout-btn">Logout</button>
+    </section>
+  </main>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

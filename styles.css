@@ -1,0 +1,188 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.hidden {
+  display: none;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+section {
+  margin: 20px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  margin: auto;
+}
+
+form label {
+  margin-top: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+form input, form button {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+form button {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+/* Buttons */
+button {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.delete-btn, .reset-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.logout-btn {
+  background-color: #f44336;
+  color: white;
+  position: relative;
+  bottom: 15px;
+  margin-top: 70px;
+  margin-bottom: 20px;
+  width: 50%;
+  max-width: 200px;
+}
+
+.logout-btn:hover {
+  background-color: #d32f2f;
+}
+
+.back-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.back-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+input[type="text"], input[type="number"] {
+  min-width: 50px;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.modal-content {
+  position: relative;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content button {
+  margin: 5px;
+}
+
+.modal-content #confirm-btn {
+  background-color: #4CAF50;
+}
+
+.modal-content #cancel-btn {
+  background-color: #f44336;
+}
+
+/* Home Page Buttons */
+.home-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 50px;
+}
+
+.home-buttons button {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 80%;
+  max-width: 300px;
+}
+
+.home-buttons button:hover {
+  background-color: #45a049;
+}
+
+/* Highlight Selected Row */
+.highlight {
+  background-color: rgba(76, 175, 80, 0.15);
+}
