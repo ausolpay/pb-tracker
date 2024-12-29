@@ -157,6 +157,10 @@ input[type="text"], input[type="number"] {
   background-color: #f44336;
 }
 
+.footer-text{
+  text-align: center;
+}
+
 /* Home Page Buttons */
 .home-buttons {
   display: flex;
